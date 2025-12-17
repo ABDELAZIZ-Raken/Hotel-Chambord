@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="icon" href="img/logo_Hotel_Chambord-ico.png" />
+
+    <title>Page introuvable | Hôtel Chambord</title>
+  </head>
+
+  <body>
+    <!-- Bandeau -->
+    <header>
+      <div class="bandeau-bg-404"></div>
+    </header>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-light sticky-top shadow">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img src="img/logo_Hotel_Chambord-all.png" alt="Hôtel Chambord" class="logo" />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Ouvrir le menu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse width-800" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link" href="pages/chambres.html">Chambres</a></li>
+            <li class="nav-item"><a class="nav-link" href="pages/restaurant.html">Restaurant</a></li>
+            <li class="nav-item"><a class="nav-link" href="pages/spa.html">Spa</a></li>
+            <li class="nav-item"><a class="nav-link" href="pages/activites.html">Activités</a></li>
+            <li class="nav-item"><a class="nav-link" href="pages/avis.html">Avis</a></li>
+            <li class="nav-item"><a class="nav-link" href="pages/contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="pages/activites.html">Activités</a></li>
+          </ul>
+
+          <form class="d-flex" role="search" method="get">
+            <input class="form-control me-2" type="search" placeholder="Rechercher" aria-label="Rechercher" />
+            <button class="search-item btn" type="submit" aria-label="Lancer la recherche">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Contenu 404 -->
+    <main class="container text-center my-5 py-5">
+      <h1 class="display-4 fw-bold mb-3">404</h1>
+      <h2 class="mb-3">Page introuvable</h2>
+      <p class="text-muted mb-4">
+        La page que vous recherchez n’existe pas ou a été déplacée.
+      </p>
+
+      <a href="index.html" class="btn btn-dark fw-bold">
+        Retour à l’accueil
+      </a>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-5 shadow pt-5">
+      <p class="text-center">
+        &copy; 2023 Hôtel Chambord. Tous droits réservés.
+        <br />
+        <em class="avertissement-text">
+          Attention ce site n'est pas à but commercial. Il est uniquement destiné à des fins d'apprentissage.
+        </em>
+      </p>
+    </footer>
+
+    <!-- JS -->
+    <script src="js/bootstrap.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
