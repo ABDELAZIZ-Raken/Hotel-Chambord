@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="icon" href="../img/logo_Hotel_Chambord-ico.png" />
+
+    <title>Gestion utilisateurs & services | Administration</title>
+  </head>
+
+  <body>
+    <!-- Navbar standard -->
+    <nav class="navbar navbar-expand-lg bg-light sticky-top shadow">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+          <img src="../img/logo_Hotel_Chambord-all.png" alt="Hôtel Chambord" class="logo" />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Ouvrir le menu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse width-800" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link" href="chambres.html">Chambres</a></li>
+            <li class="nav-item"><a class="nav-link" href="restaurant.html">Restaurant</a></li>
+            <li class="nav-item"><a class="nav-link" href="spa.html">Spa</a></li>
+            <li class="nav-item"><a class="nav-link" href="activites.html">Activités</a></li>
+            <li class="nav-item"><a class="nav-link" href="avis.html">Avis</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+
+          <a href="connexion.html" class="btn btn-outline-dark ms-2" aria-label="Connexion">
+            <i class="fa-solid fa-user"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container my-5">
+      <h1 class="text-center mb-5">Gestion utilisateurs & services</h1>
+
+      <!-- AJOUT / MODIFICATION (formulaire unique) -->
+      <section class="mb-5">
+        <h2 class="h4 mb-3">Ajouter / Modifier</h2>
+
+        <form action="#" method="post" class="row g-3">
+          <div class="col-md-4">
+            <label for="type" class="form-label">Type</label>
+            <select id="type" name="type" class="form-select" required>
+              <option value="" selected disabled>Choisissez</option>
+              <option value="utilisateur">Utilisateur</option>
+              <option value="service">Service</option>
+            </select>
+          </div>
+
+          <div class="col-md-4">
+            <label for="nom" class="form-label">Nom</label>
+            <input type="text" id="nom" name="nom" class="form-control" required />
+          </div>
+
+          <div class="col-md-4">
+            <label for="email" class="form-label">Email (si utilisateur)</label>
+            <input type="email" id="email" name="email" class="form-control" />
+          </div>
+
+          <div class="col-md-4">
+            <label for="role" class="form-label">Rôle (si utilisateur)</label>
+            <select id="role" name="role" class="form-select">
+              <option value="" selected>—</option>
+              <option value="client">Client</option>
+              <option value="admin">Admin</option>
+              <option value="employe">Employé</option>
+            </select>
+          </div>
+
+          <div class="col-md-4">
+            <label for="statut" class="form-label">Statut</label>
+            <select id="statut" name="statut" class="form-select" required>
+              <option value="actif" selected>Actif</option>
+              <option value="inactif">Inactif</option>
+            </select>
+          </div>
+
+          <div class="col-md-4">
+            <label for="id" class="form-label">ID (pour modifier)</label>
+            <input type="number" id="id" name="id" class="form-control" placeholder="ex: 3" />
+          </div>
+
+          <div class="col-12">
+            <button type="submit" class="btn btn-dark fw-bold me-2">Enregistrer</button>
+            <button type="reset" class="btn btn-outline-dark fw-bold">Réinitialiser</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- RECHERCHE / TRI -->
+      <section class="mb-4">
+        <div class="row g-3 align-items-end">
+          <div class="col-md-6">
+            <label for="recherche" class="form-label">Recherche</label>
+            <input
+              type="text"
+              id="recherche"
+              class="form-control"
+              placeholder="Nom, email, service..."
+            />
+          </div>
+
+          <div class="col-md-3">
+            <label for="tri" class="form-label">Trier par</label>
+            <select id="tri" class="form-select">
+              <option value="id">ID</option>
+              <option value="nom">Nom</option>
+              <option value="type">Type</option>
+              <option value="statut">Statut</option>
+            </select>
+          </div>
+
+          <div class="col-md-3">
+            <button class="btn btn-dark w-100 fw-bold" type="button">Appliquer</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- LISTE + ACTIONS -->
+      <section>
+        <h2 class="h4 mb-3">Liste</h2>
+
+        <div class="table-responsive">
+          <table class="table table-bordered table-striped align-middle">
+            <thead class="table-dark">
+              <tr>
+                <th>ID</th>
+                <th>Type</th>
+                <th>Nom</th>
+                <th>Email</th>
+                <th>Rôle</th>
+                <th>Statut</th>
+                <th style="width: 190px">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Utilisateur</td>
+                <td>Jean Dupont</td>
+                <td>jean.dupont@mail.fr</td>
+                <td>Client</td>
+                <td>Actif</td>
+                <td>
+                  <button type="button" class="btn btn-sm btn-outline-dark me-1">Modifier</button>
+
+                  <!-- Suppression avec confirmation -->
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-danger"
+                    onclick="return confirm('Confirmer la suppression ?');"
+                  >
+                    Supprimer
+                  </button>
+                </td>
+              </tr>
+
+              <tr>
+                <td>2</td>
+                <td>Service</td>
+                <td>Spa</td>
+                <td>—</td>
+                <td>—</td>
+                <td>Actif</td>
+                <td>
+                  <button type="button" class="btn btn-sm btn-outline-dark me-1">Modifier</button>
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-danger"
+                    onclick="return confirm('Confirmer la suppression ?');"
+                  >
+                    Supprimer
+                  </button>
+                </td>
+              </tr>
+
+              <tr>
+                <td>3</td>
+                <td>Utilisateur</td>
+                <td>Admin Hôtel</td>
+                <td>admin@chambord.fr</td>
+                <td>Admin</td>
+                <td>Actif</td>
+                <td>
+                  <button type="button" class="btn btn-sm btn-outline-dark me-1">Modifier</button>
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-danger"
+                    onclick="return confirm('Confirmer la suppression ?');"
+                  >
+                    Supprimer
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="text-muted">
+          Page de préparation backend : la recherche/tri et les actions ne sont pas fonctionnels (pas de base de données).
+        </p>
+      </section>
+    </main>
+
+    <footer class="mt-5 shadow pt-5">
+      <p class="text-center">
+        &copy; 2023 Hôtel Chambord. Tous droits réservés.
+        <br />
+        <em class="avertissement-text">
+          Attention ce site n'est pas à but commercial. Il est uniquement destiné à des fins d'apprentissage.
+        </em>
+      </p>
+    </footer>
+
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

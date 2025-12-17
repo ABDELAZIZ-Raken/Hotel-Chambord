@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="icon" href="../img/logo_Hotel_Chambord-ico.png" />
+
+    <title>Hôtel Chambord | Réservation</title>
+  </head>
+
+  <body>
+    <!-- Bandeau (image placeholder) -->
+    <header>
+      <!-- Mets ici une photo type "réception / check-in / QR code / comptoir" -->
+      <div class="bandeau-bg-reservation"></div>
+    </header>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-light sticky-top shadow">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+          <img src="../img/logo_Hotel_Chambord-all.png" alt="Hôtel Chambord" class="logo" />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Ouvrir le menu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+<div class="collapse navbar-collapse width-800" id="navbarSupportedContent">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>
+        <li class="nav-item"><a class="nav-link" href="chambres.html">Chambres</a></li>
+        <li class="nav-item"><a class="nav-link" href="restaurant.html">Restaurant</a></li>
+        <li class="nav-item"><a class="nav-link" href="spa.html">Spa</a></li>
+        <li class="nav-item"><a class="nav-link" href="activites.html">Activités</a></li>
+        <li class="nav-item"><a class="nav-link" href="avis.html">Avis</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <a href="connexion.html" class="btn btn-outline-dark ms-2">
+            <i class="fa-solid fa-user"></i>
+        </a>
+    </ul>
+
+          <form class="d-flex" role="search" method="get">
+            <input class="form-control me-2" type="search" placeholder="Rechercher" aria-label="Rechercher" />
+            <button class="search-item btn" type="submit" aria-label="Lancer la recherche">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container my-5" style="max-width: 900px">
+      <!-- Réservation chambres -->
+      <section class="mb-5">
+        <h1 class="text-center mb-2">Réservation des Chambres</h1>
+        <p class="text-center text-muted mb-4">Réservez votre séjour à l’Hôtel Chambord en quelques clics.</p>
+
+        <form class="mx-auto" style="max-width: 650px" action="#" method="post">
+          <div class="mb-3">
+            <label for="typeChambre" class="form-label">Type de chambre</label>
+            <select id="typeChambre" name="typeChambre" class="form-select" required>
+              <option value="" selected disabled>Choisissez une option</option>
+              <option value="relais">La Tour du Relais</option>
+              <option value="luxe">Luxe</option>
+              <option value="nos-suites">Nos Suites</option>
+              <option value="cosy">Cosy</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label for="arriveeChambre" class="form-label">Date d'arrivée</label>
+            <input type="date" id="arriveeChambre" name="arriveeChambre" class="form-control" required />
+          </div>
+
+          <div class="mb-4">
+            <label for="departChambre" class="form-label">Date de départ</label>
+            <input type="date" id="departChambre" name="departChambre" class="form-control" required />
+          </div>
+
+          <button type="submit" class="btn btn-dark w-100 fw-bold">Réserver</button>
+        </form>
+      </section>
+
+      <!-- Réservation soins -->
+      <section class="mb-5">
+        <h2 class="text-center mb-2">Réservation des Soins</h2>
+        <p class="text-center text-muted mb-4">
+          Réservez votre soin au Spa de l’Hôtel Chambord pour une expérience relaxante.
+        </p>
+
+        <form class="mx-auto" style="max-width: 650px" action="#" method="post">
+          <div class="mb-3">
+            <label for="typeSoin" class="form-label">Type de soin</label>
+            <select id="typeSoin" name="typeSoin" class="form-select" required>
+              <option value="" selected disabled>Choisissez une option</option>
+              <option value="spa">Le SPA</option>
+              <option value="demi-journee">Une demi-journée au spa</option>
+              <option value="morning">Morning Spa</option>
+              <option value="parenthese">Parenthèse déjeuner & spa</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label for="arriveeSoin" class="form-label">Date d'arrivée</label>
+            <input type="date" id="arriveeSoin" name="arriveeSoin" class="form-control" required />
+          </div>
+
+          <div class="mb-4">
+            <label for="departSoin" class="form-label">Date de départ</label>
+            <input type="date" id="departSoin" name="departSoin" class="form-control" required />
+          </div>
+
+          <button type="submit" class="btn btn-dark w-100 fw-bold">Réserver</button>
+        </form>
+      </section>
+
+      <!-- Réservation table -->
+      <section class="mb-5">
+        <h2 class="text-center mb-2">Réservation d'une table</h2>
+        <p class="text-center text-muted mb-4">Réservez votre table au Restaurant de l’Hôtel Chambord.</p>
+
+        <form class="mx-auto" style="max-width: 650px" action="#" method="post">
+          <div class="mb-3">
+            <label for="typeTable" class="form-label">Type de table</label>
+            <select id="typeTable" name="typeTable" class="form-select" required>
+              <option value="" selected disabled>Choisissez une option</option>
+              <option value="2">Table 2 personnes</option>
+              <option value="4">Table 4 personnes</option>
+              <option value="6">Table 6 personnes</option>
+              <option value="8">Table 8 personnes</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label for="dateReservation" class="form-label">Date réservation</label>
+            <input type="date" id="dateReservation" name="dateReservation" class="form-control" required />
+          </div>
+
+          <div class="mb-4">
+            <label for="heureReservation" class="form-label">Heure</label>
+            <input type="time" id="heureReservation" name="heureReservation" class="form-control" required />
+          </div>
+
+          <button type="submit" class="btn btn-dark w-100 fw-bold">Réserver</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- Footer (identique logique) -->
+    <footer class="mt-5 shadow pt-5">
+      <div class="container d-flex justify-content-center reverse-order">
+        <div class="col-md-4 my-5 ps-4">
+          <h2>Liens utiles</h2>
+          <ul class="list-unstyled">
+            <li><a href="contact.html" class="text-decoration-none text-dark">Contact</a></li>
+            <li><a href="recrutement.html" class="text-decoration-none text-dark">Recrutement</a></li>
+            <li><a href="mentions-legales.html" class="text-decoration-none text-dark">Mentions légales</a></li>
+            <li>
+              <a href="politique-protection-donnees.html" class="text-decoration-none text-dark">
+                Politique de protection des données
+              </a>
+            </li>
+            <li><a href="politique-cookies.html" class="text-decoration-none text-dark">Politique cookies</a></li>
+          </ul>
+
+          <h2>Suivez-nous</h2>
+          <div class="mt-3 d-flex">
+            <a href="https://www.facebook.com" class="btn btn-outline-dark me-2" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com" class="btn btn-outline-dark me-2" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.twitter.com" class="btn btn-outline-dark me-2" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-md-7 my-5">
+          <div class="row justify-content-center">
+            <div class="col-lg-9">
+              <form method="post" action="#" style="max-width: 500px" class="mx-auto">
+                <h2 class="mb-3">Contactez Nous</h2>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="your-name" class="form-label">Nom</label>
+                    <input type="text" class="form-control" id="your-name" name="your-name" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="your-surname" class="form-label">Prénom</label>
+                    <input type="text" class="form-control" id="your-surname" name="your-surname" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="your-email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="your-email" name="your-email" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="your-subject" class="form-label">Votre Sujet</label>
+                    <input type="text" class="form-control" id="your-subject" name="your-subject" />
+                  </div>
+                  <div class="col-12">
+                    <label for="your-message" class="form-label">Votre Message</label>
+                    <textarea class="form-control" id="your-message" name="your-message" rows="5" required></textarea>
+                  </div>
+                  <div class="col-12">
+                    <div class="row justify-content-md-end">
+                      <div class="col-md-6">
+                        <button type="submit" class="btn btn-dark w-100 fw-bold">Envoyer</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-center">
+        &copy; 2023 Hôtel Chambord. Tous droits réservés.
+        <br />
+        <em class="avertissement-text">
+          Attention ce site n'est pas à but commercial. Il est uniquement destiné à des fins d'apprentissage.
+        </em>
+      </p>
+    </footer>
+
+    <!-- JS -->
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>
