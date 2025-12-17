@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="icon" href="../img/logo_Hotel_Chambord-ico.png" />
+
+    <title>Création d’emplois | Administration</title>
+  </head>
+
+  <body>
+    <!-- Navbar standard (pages /pages) -->
+    <nav class="navbar navbar-expand-lg bg-light sticky-top shadow">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+          <img src="../img/logo_Hotel_Chambord-all.png" alt="Hôtel Chambord" class="logo" />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Ouvrir le menu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse width-800" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link" href="chambres.html">Chambres</a></li>
+            <li class="nav-item"><a class="nav-link" href="restaurant.html">Restaurant</a></li>
+            <li class="nav-item"><a class="nav-link" href="spa.html">Spa</a></li>
+            <li class="nav-item"><a class="nav-link" href="avis.html">Avis</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="activites.html">Activités</a></li>
+          </ul>
+
+          <a href="connexion.html" class="btn btn-outline-dark ms-2" aria-label="Connexion">
+            <i class="fa-solid fa-user"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container my-5">
+      <h1 class="text-center mb-5">Création d’offres d’emploi</h1>
+
+      <!-- Formulaire création emploi -->
+      <section class="mb-5">
+        <h2 class="h4 mb-3">Nouvelle offre</h2>
+
+        <form action="#" method="post" class="row g-3">
+          <div class="col-md-6">
+            <label for="poste" class="form-label">Intitulé du poste</label>
+            <input type="text" id="poste" name="poste" class="form-control" required />
+          </div>
+
+          <div class="col-md-6">
+            <label for="type_contrat" class="form-label">Type de contrat</label>
+            <select id="type_contrat" name="type_contrat" class="form-select" required>
+              <option value="" selected disabled>Choisissez</option>
+              <option value="cdi">CDI</option>
+              <option value="cdd">CDD</option>
+              <option value="stage">Stage</option>
+              <option value="alternance">Alternance</option>
+            </select>
+          </div>
+
+          <div class="col-12">
+            <label for="description" class="form-label">Description du poste</label>
+            <textarea
+              id="description"
+              name="description"
+              rows="4"
+              class="form-control"
+              required
+            ></textarea>
+          </div>
+
+          <div class="col-md-6">
+            <label for="lieu" class="form-label">Lieu</label>
+            <input type="text" id="lieu" name="lieu" class="form-control" required />
+          </div>
+
+          <div class="col-md-6">
+            <label for="date_debut" class="form-label">Date de début</label>
+            <input type="date" id="date_debut" name="date_debut" class="form-control" required />
+          </div>
+
+          <div class="col-12">
+            <button type="submit" class="btn btn-dark fw-bold">
+              Créer l’offre
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Liste des offres existantes -->
+      <section>
+        <h2 class="h4 mb-3">Offres existantes</h2>
+
+        <table class="table table-bordered table-striped">
+          <thead class="table-dark">
+            <tr>
+              <th>Poste</th>
+              <th>Contrat</th>
+              <th>Lieu</th>
+              <th>Date de début</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Commis de cuisine</td>
+              <td>CDI</td>
+              <td>Chambord</td>
+              <td>01/09/2025</td>
+            </tr>
+            <tr>
+              <td>Agent d’accueil</td>
+              <td>CDD</td>
+              <td>Chambord</td>
+              <td>15/06/2025</td>
+            </tr>
+            <tr>
+              <td>Femme de chambre</td>
+              <td>CDI</td>
+              <td>Chambord</td>
+              <td>01/07/2025</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer class="mt-5 shadow pt-5">
+      <p class="text-center">
+        &copy; 2023 Hôtel Chambord. Tous droits réservés.
+        <br />
+        <em class="avertissement-text">
+          Attention ce site n'est pas à but commercial. Il est uniquement destiné à des fins d'apprentissage.
+        </em>
+      </p>
+    </footer>
+
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>
